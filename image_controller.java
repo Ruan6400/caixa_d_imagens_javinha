@@ -20,7 +20,6 @@ import org.springframework.http.MediaType;
 public class image_controller {
     
     @GetMapping("/images/{imagename}")
-    @ResponseBody
     public ResponseEntity<Resource> getImage(@PathVariable String imagename) throws IOException{
         Path uploPath = Paths.get(System.getProperty("user.dir"),"uploads");
         Path filePath = uploPath.resolve(imagename).normalize();
